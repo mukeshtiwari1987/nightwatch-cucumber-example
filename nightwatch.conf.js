@@ -20,15 +20,17 @@ module.exports = {
   },
   test_settings: {
     default: {
-      launch_url: 'http://localhost:8087',
-      selenium_port: 4444,
-      selenium_host: '127.0.0.1',
+      launch_url: 'http://hub-cloud.browserstack.com',
+      selenium_port: 80,
+      selenium_host: 'hub-cloud.browserstack.com',
       desiredCapabilities: {
+        'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
+        'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
         browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true,
         chromeOptions: {
-          args: ['incognito', 'headless', 'no-sandbox', 'disable-gpu']
+          args: ['incognito', 'no-sandbox', 'disable-gpu']
         }
       },
       selenium: {

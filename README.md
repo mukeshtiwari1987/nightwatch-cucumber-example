@@ -10,3 +10,14 @@ cd nightwatch-cucumber-example
 npm i
 ntl
 ```
+## Executing individual feature files or scenarios
+Single feature file
+```
+npm run e2e-test -- features/google-search.feature
+```
+Multiple feature files
+```
+npm run e2e-test -- features/google-search features/duckduckgo-search
+```
+Single scenario by its line number
+npm run e2e-test -- features/google-search.feature:9

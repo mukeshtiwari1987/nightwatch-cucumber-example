@@ -20,4 +20,6 @@ Multiple feature files
 npm run e2e-test -- features/google-search features/duckduckgo-search
 ```
 Single scenario by its line number
+```
 npm run e2e-test -- features/google-search.feature:9
+```
